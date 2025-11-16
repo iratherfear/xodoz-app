@@ -1,9 +1,6 @@
 package dev.iratherfear.xodos_app.model;
 
 import java.util.UUID;
-
-import org.hibernate.annotations.GenericGenerator;
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.Entity;

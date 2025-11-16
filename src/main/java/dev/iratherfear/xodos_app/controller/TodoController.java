@@ -11,7 +11,6 @@ import dev.iratherfear.xodos_app.service.TodoService;
 
 import java.net.URI;
 import java.util.List;
-import java.util.Optional;
 import java.util.UUID;
 
 import org.springframework.http.ResponseEntity;
@@ -37,6 +36,7 @@ public class TodoController {
         this.userRepository = userRepository;
     }
 
+    @SuppressWarnings("unused")
     @GetMapping
     public ResponseEntity<List<Todo>> getAllTodos(Authentication authentication) {
         String username = authentication.getName();

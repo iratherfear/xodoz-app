@@ -4,14 +4,14 @@ spring:
     application:
         name: xodos-app
     datasource:
-        url: jdbc:h2:mem:xodoz
-        driver-class-name: org.h2.Driver
-        username: sa
-        password: pass
+        url: jdbc:mysql://localhost:3306/xodoz?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        username: xodoz
+        password: password
     jpa:
-        database-platform: org.hibernate.dialect.H2Dialect
+        show-sql: true
         hibernate:
             ddl-auto: update
-    h2:
-        console:
-            enabled: true
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.MySQL8Dialect
